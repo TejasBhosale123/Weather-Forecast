@@ -29,7 +29,7 @@ function App() {
 
   const[city,setCity] = useState("Mumbai");
   const [weather, setWeather] = useState(null);
-  const [msg,setMsg] = useState("Wind");
+
   const hCity = (e) =>{
     setCity(e.target.value);
   }
@@ -51,18 +51,7 @@ function App() {
  const getWeather = (e) => {  
   e.preventDefault();
   fetchWeather();
-  if(weather.main.temp < 25){
-    setMsg("It is Normal");
-  }
-  else if(weather.weather[0].main.toLowerCase() === "rain"){
-    setMsg("Its rainy Outside Use Umbrella")
-  }
-  else if(weather.main.temp > 25){
-    setMsg("It is Hot, Apply the sunscreen");
-  }
-  else{
-    setMsg("Enjoy ur day");
-  }
+  
   }
  
 
@@ -84,7 +73,7 @@ function App() {
             <input type="submit" value='Get Weather'></input>
             </form>
             <br/>
-            <h2>{msg}</h2>
+            
 
             </>
         
