@@ -84,8 +84,8 @@ function App() {
             <div className="container-temp">
               {" "}
               {isCelsius
-                ? `${weather.main.temp} °C`
-                : `${(weather.main.temp * 9) / 5 + 32} °F`}
+                ? `${(weather.main.temp).toFixed(2)} °C`
+                : `${((weather.main.temp * 9) / 5 + 32).toFixed(2)} °F`}
             </div>
             <div className="container-msg"> {weather.weather[0].main} </div>
             <br />
